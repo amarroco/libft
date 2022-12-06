@@ -6,7 +6,7 @@
 /*   By: amarroco <amarroco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:19:33 by amarroco          #+#    #+#             */
-/*   Updated: 2022/11/30 10:41:57 by amarroco         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:30:36 by amarroco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_strchr(set, s1[i]) && i > 0)
 		i--;
 	d = ft_substr(s1, 0, i + 1);
+	if (!d)
+		return (NULL);
 	return (d);
 }
